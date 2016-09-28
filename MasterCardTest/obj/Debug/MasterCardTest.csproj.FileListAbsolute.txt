@@ -1,0 +1,13 @@
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\MasterCardTest.exe.config
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\obj\Debug\MasterCardTest.csprojResolveAssemblyReference.cache
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\MasterCardTest.exe
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\MasterCardTest.pdb
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\log4net.dll
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\MasterCard-Core.dll
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\MasterCard-Match.dll
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\Newtonsoft.Json.dll
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\nunit.framework.dll
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\RestSharp.dll
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\obj\Debug\MasterCardTest.exe
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\obj\Debug\MasterCardTest.pdb
+c:\users\antho\documents\visual studio 2015\Projects\MasterCardTest\MasterCardTest\bin\Debug\mcapi_sandbox_key.p12
