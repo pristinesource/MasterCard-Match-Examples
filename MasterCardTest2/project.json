@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": [
+      "mcapi_sandbox_key.p12",
+    ]
+  },
+
+  "dependencies": {
+    "MasterCard-Match-Unofficial": "101.1.6",
+    "MasterCard-Core-Unofficial": "101.1.6",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.1"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  }
+}

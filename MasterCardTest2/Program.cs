@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Reflection;
 using System.Threading.Tasks;
-using MasterCard.Api.Match;
 using MasterCard.Core;
-using MasterCard.Core.Model;
 using MasterCard.Core.Security.OAuth;
 
-// these are the original tests from Mastercard. (at the time of writing this)
-
-namespace MasterCardTest {
-    class Program {
-        static void Main(string[] args) {
-
+namespace MasterCardTest2 {
+    public class Program {
+        public static void Main(string[] args) {
 
             string consumerKey = "L5BsiPgaF-O3qA36znUATgQXwJB6MRoMSdhjd7wt50c97279!50596e52466e3966546d434b7354584c4975693238513d3d";   // You should copy this from "My Keys" on your project page e.g. UTfbhDCSeNYvJpLL5l028sWL9it739PYh6LU5lZja15xcRpY!fd209e6c579dc9d7be52da93d35ae6b6c167c174690b72fa
             string keyAlias = "alias";   // For production: change this to the key alias you chose when you created your production key
@@ -24,16 +20,18 @@ namespace MasterCardTest {
             ApiConfig.setSandbox(true); // For production: use ApiConfig.setSandbox(false)
 
 
-            runTest(MasterCardTest.MasterCard_Examples.TerminationInquiryRequestExample.run, nameof(MasterCardTest.MasterCard_Examples.TerminationInquiryRequestExample));
+            //runTest(MasterCardTest.MasterCard_Examples.TerminationInquiryRequestExample.run, nameof(MasterCardTest.MasterCard_Examples.TerminationInquiryRequestExample));
 
             // this is a modification of the first test that uses my dynamic response display
-            //runTest(MasterCardTest.MasterCard_Examples.TerminationInquiryRequest2Example.run, nameof(MasterCardTest.MasterCard_Examples.TerminationInquiryRequest2Example));
+            runTest(MasterCardTest.MasterCard_Examples.TerminationInquiryRequest2Example.run, nameof(MasterCardTest.MasterCard_Examples.TerminationInquiryRequest2Example));
 
             runTest(MasterCardTest.MasterCard_Examples.TerminationInquiryHistoryRequestExample.run, nameof(MasterCardTest.MasterCard_Examples.TerminationInquiryHistoryRequestExample));
+            
             runTest(MasterCardTest.MasterCard_Examples.AddTerminatedMerchantExample.run, nameof(MasterCardTest.MasterCard_Examples.AddTerminatedMerchantExample));
             runTest(MasterCardTest.MasterCard_Examples.AcquirerContactRequestExample.run, nameof(MasterCardTest.MasterCard_Examples.AcquirerContactRequestExample));
             runTest(MasterCardTest.MasterCard_Examples.RetroactiveInquiryRequestExample.run, nameof(MasterCardTest.MasterCard_Examples.RetroactiveInquiryRequestExample));
             runTest(MasterCardTest.MasterCard_Examples.RetroactiveInquiryDetailsRequestExample.run, nameof(MasterCardTest.MasterCard_Examples.RetroactiveInquiryDetailsRequestExample));
+            
 
 
             Console.ReadKey();
@@ -48,11 +46,15 @@ namespace MasterCardTest {
 
             try {
                 t();
-            } catch (Exception ex) {
+            } catch(Exception ex) {
                 Console.WriteLine(ex.ToString());
             }
 
             Console.Write(Environment.NewLine + Environment.NewLine);
+        }
+
+        public static string GetCurrenyAssemblyPath() {
+            return Path.GetDirectoryName(typeof(Program).GetTypeInfo().Assembly.CodeBase).Remove(0, "file:\\".Length);
         }
     }
 }
