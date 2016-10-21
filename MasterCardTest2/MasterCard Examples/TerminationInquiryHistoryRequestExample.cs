@@ -12,6 +12,9 @@ namespace MasterCardTest.MasterCard_Examples {
         public static void run() {
 
             RequestMap map = new RequestMap();
+            // This IRN number is supposed to come from "TerminationInquiry​.TransactionReferenceNumber" in the TerminationInquiryRequest
+            // but that field is blank.  Instead it can be pulled form the url in the field named "TerminationInquiry​.Ref" of the
+            // TerminationInquiryRequest
             map.Set("IRN", "19962016102100041");
     
             map.Set("AcquirerId", "1996");
